@@ -1,0 +1,205 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Template</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .email-container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .greeting {
+        background-color: #eef4f9;
+
+        padding: 20px;
+        text-align: center;
+      }
+      .footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 12px;
+      }
+      .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <div class="header">
+        <img
+          src="../../greeting-card/src/assets/emailtemplatelogo.svg"
+          alt="GreetsU Logo"
+        />
+        <h2>Hi [Receivers Name],</h2>
+        <p>Someone has sent you a card!</p>
+      </div>
+
+      <div class="greeting">
+        <tr>
+          <td class="wrapper">
+            <img
+              src="../../greeting-card/src/assets/stampemailtemplate.svg"
+              alt="Envelope Image"
+            />
+            <p>Your Loved One</p>
+          </td>
+        </tr>
+
+        <h3>
+          Open the Envelope for a Heartfelt Message from Your Special Someone
+        </h3>
+      </div>
+      <tr>
+        <td>
+          <center>
+            <a
+              href="#"
+              style="
+                background-color: #ffffff;
+                color: #000000;
+                border-radius: 10px;
+                border: 3.47px solid #000000;
+                box-shadow: 5.778400897979736px 5.778400897979736px 0px 0px
+                  #000000;
+
+                padding: 10px;
+                text-decoration: none;
+              "
+              >Open your Envelope</a
+            >
+          </center>
+        </td>
+      </tr>
+      <div class="footer">Copyright © 2024</div>
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Template</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .email-container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+      .header img {
+        max-width: 100%;
+        height: auto;
+      }
+      .header h2,
+      .header p {
+        text-align: center;
+      }
+      .greeting {
+        background-color: #eef4f9;
+        padding: 20px;
+        text-align: center;
+      }
+      .greeting img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      .greeting p {
+        margin-bottom: 10px;
+      }
+      .greeting h3 {
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      .footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 12px;
+      }
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ffffff;
+        color: #000000;
+        border-radius: 10px;
+        border: 3.47px solid #000000;
+        text-decoration: none;
+        box-shadow: 5.778400897979736px 5.778400897979736px 0px 0px #000000;
+      }
+      .line {
+        width: 420px;
+        border: 1px;
+        border: 1px solid #00000033;
+        color: #00000033;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <table
+      class="email-container"
+      cellspacing="0"
+      cellpadding="0"
+      border="0"
+      align="center"
+    >
+      <!-- Header -->
+      <tr>
+        <td>
+          <div class="header">
+            <img
+              src="{{logoSrc}}"
+              alt="GreetsU Logo"
+            />
+            <h2>Hi {{name}},</h2>
+            <p>Someone has sent you a card!</p>
+          </div>
+        </td>
+      </tr>
+
+      <!-- Middle -->
+
+      <tr>
+        <td>
+          <img
+            src="{{bannerSrc}}"
+            alt="GreetsU Envelope"
+          />
+          <center>
+            <a href="{{receiverUrl}}" class="button">Open your Envelope</a>
+          </center>
+
+          <hr class="line" />
+        </td>
+      </tr>
+      <!-- Footer -->
+      <tr>
+        <td>
+          <div class="footer">Copyright © 2024</div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
